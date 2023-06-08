@@ -1,190 +1,191 @@
-.sidebar{
-    position: sticky;
-    height: 100vh;
-    top: 0;
-    overflow-y: scroll;
-    padding:0 1.5rem;
-    background-color: #fff;
-    
-    
-    
-    .logo{
-        display: flex;
-        align-items: center;
-        margin-top: 2.5rem;
+.sidebar {
+  position: sticky;
+  height: 100vh;
+  top: 0;
+  overflow-y: scroll;
+  padding: 0 1.5rem;
+  background-color: #fff;
 
-       
+  .logo {
+    display: flex;
+    align-items: center;
+    margin-top: 2.5rem;
 
-        .logo-text{
-            font-size: 1.4rem;
-            font-weight: bold;
-            margin-left: 1rem;
-            font-family: 'Pacifico', cursive;
-            letter-spacing: 4px;
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            background-image: linear-gradient(120deg, rgb(40, 189, 95),rgb(49, 200, 234));
-
-            @media screen and (max-width:540px){
-                font-size: .9rem;
-             }
-        }
+    .logo_image {
+      width: 2.5rem;
+      height: 2.5rem;
     }
 
-    .name{
+    .logo-text {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-left: 1rem;
+      font-family: "Pacifico", cursive;
+      letter-spacing: 4px;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      background-image: linear-gradient(
+        120deg,
+        rgb(40, 189, 95),
+        rgb(49, 200, 234)
+      );
+
+      @media screen and (max-width: 540px) {
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .name {
+    display: grid;
+    grid-template-columns: 7rem 10rem;
+    background-color: rgb(246, 243, 243);
+    align-items: center;
+    border-radius: 15px;
+    margin-top: 2rem;
+    cursor: pointer;
+
+    @media screen and (max-width: 540px) {
+      grid-template-columns: 4rem 10rem;
+    }
+
+    .block {
+      margin-left: 2rem;
+      @media screen and (max-width: 540px) {
+        margin-left: 1rem;
+      }
+      h2 {
         display: grid;
-        grid-template-columns: 7rem 10rem;
-        background-color:rgb(246, 243, 243);
-        align-items: center;
-        border-radius: 15px;
-        margin-top: 2rem;
-        cursor: pointer;
+        justify-content: center;
+        background-color: rgb(255, 162, 0);
+        height: 25px;
+        width: 25px;
+        padding: 1rem;
+        border-radius: 50%;
 
-        @media screen and (max-width:540px){
-            grid-template-columns: 4rem 10rem;
-         }
+        @media screen and (max-width: 540px) {
+          font-size: 1rem;
+          height: 15px;
+          width: 15px;
+          padding: 0.7rem;
+        }
+      }
+    }
 
-        .block{
-            margin-left: 2rem;
-            @media screen and (max-width:540px){
-                margin-left: 1rem;
-             }
-          h2{
+    .description {
+      // line-height: .5rem;
+      font-size: 1.08rem;
+      @media screen and (max-width: 540px) {
+        font-size: 0.7rem;
+      }
+      h4 {
+        letter-spacing: 1px;
+        color: rgb(73, 69, 69);
+      }
+      p {
+        color: rgb(175, 171, 171);
+        margin-top: -1rem;
+        @media screen and (max-width: 540px) {
+          margin-top: -0.5rem;
+        }
+      }
+    }
+  }
+  .links {
+    margin-top: 3rem;
+
+    .header {
+      color: rgb(114, 112, 112);
+      font-size: 0.75rem;
+      margin-left: 1rem;
+      letter-spacing: 1px;
+      margin-top: 2.5rem;
+
+      @media screen and (max-width: 540px) {
+        font-size: 0.5rem;
+      }
+    }
+
+    .link-items {
+      // display: grid;
+      // justify-content: center;
+      ul {
+        padding: 0;
+
+        .link-item {
+          display: grid;
+          // grid-template-columns: 2rem auto;
+          gap: 1rem;
+          align-items: center;
+          list-style: none;
+          margin-bottom: 5px;
+          padding: 1rem;
+          cursor: pointer;
+          border-radius: 10px;
+          text-decoration: none;
+
+          @media screen and (max-width: 540px) {
+            padding: 0.7rem;
+          }
+
+          .item {
             display: grid;
-            justify-content: center;
-            background-color: rgb(255, 162, 0);
-            height:25px ;
-            width:25px ;
-            padding: 1rem;
-            border-radius: 50%;
+            grid-template-columns: 2rem auto;
+            gap: 1rem;
+            align-items: center;
+          }
 
-            @media screen and (max-width:540px){
-                font-size: 1rem;
-                height: 15px;
-                width: 15px;
-                padding: .7rem;
-             }
+          &.active {
+            background-color: rgba(218, 239, 219, 0.888);
+
+            .icon {
+              color: rgba(49, 176, 66, 0.888);
+              font-size: 2rem;
+              font-weight: bold;
+
+              @media screen and (max-width: 540px) {
+                font-size: 1.5rem;
+              }
+            }
+
+            .text {
+              // font-weight: bold;
+              font-size: 1.08rem;
+              color: rgba(59, 201, 78, 0.888);
+              @media screen and (max-width: 540px) {
+                font-size: 0.9rem;
+              }
+            }
+
+            &:hover {
+              background-color: rgba(218, 239, 219, 0.888);
+            }
+          }
+
+          &:hover {
+            background-color: rgb(244, 243, 255);
+          }
+
+          .icon {
+            color: rgb(155, 152, 152);
+            font-size: 2rem;
+            font-weight: bold;
+            @media screen and (max-width: 540px) {
+              font-size: 1.5rem;
+            }
+          }
+
+          .text {
+            // font-weight: bold;
+            font-size: 1.08rem;
+            color: rgb(133, 126, 126);
+            @media screen and (max-width: 540px) {
+              font-size: 0.9rem;
+            }
           }
         }
-
-        .description{
-            // line-height: .5rem;
-            font-size: 1.08rem;
-            @media screen and (max-width:540px){
-                font-size: .7rem;
-             }
-            h4{
-                letter-spacing: 1px;
-                color: rgb(73, 69, 69);
-            }
-            p{
-                color: rgb(175, 171, 171);
-                margin-top: -1rem;
-                @media screen and (max-width:540px){
-                    margin-top: -0.5rem;
-                 }
-            }
-        }
+      }
     }
-    .links{
-        margin-top: 3rem;
-        
-        
-        .header{
-            color: rgb(114, 112, 112);
-            font-size: .75rem;
-            margin-left: 1rem;
-            letter-spacing: 1px;
-            margin-top: 2.5rem;
-
-            @media screen and (max-width:540px){
-                font-size: .5rem;
-             }
-        }
-
-        .link-items{
-            // display: grid;
-            // justify-content: center;
-            ul{
-                padding: 0;
-
-                .link-item{
-                    display: grid;
-                    // grid-template-columns: 2rem auto;
-                    gap: 1rem;
-                    align-items: center;
-                    list-style: none;
-                    margin-bottom: 5px;
-                    padding: 1rem ;
-                    cursor: pointer;
-                    border-radius: 10px;
-                    text-decoration: none;
-
-                    @media screen and (max-width:540px){
-                        padding: .7rem;
-                     }
-
-                    .item{
-                        display: grid;
-                        grid-template-columns: 2rem auto;
-                        gap: 1rem;
-                        align-items: center;
-                    }
-
-                    &.active{
-                        background-color:rgba(218, 239, 219, 0.888);
-
-                        .icon{
-                            color: rgba(49, 176, 66, 0.888);
-                            font-size: 2rem;
-                            font-weight: bold;
-
-                            @media screen and (max-width:540px){
-                                font-size: 1.5rem;
-                             }
-                        }
-
-                        .text{
-                            // font-weight: bold;
-                            font-size: 1.08rem;
-                            color: rgba(59, 201, 78, 0.888);
-                            @media screen and (max-width:540px){
-                                font-size: .9rem;
-                             }
-                        }
-                        
-                        &:hover{
-                            background-color: rgba(218, 239, 219, 0.888);
-                        }
-
-                    }
-
-                    &:hover{
-                        background-color: rgb(244, 243, 255);
-                    }
-    
-                    .icon{
-                        color: rgb(155, 152, 152);
-                        font-size: 2rem;
-                        font-weight: bold;
-                        @media screen and (max-width:540px){
-                            font-size: 1.5rem;
-                         }
-                    }
-
-                    .text{
-                        // font-weight: bold;
-                        font-size: 1.08rem;
-                        color: rgb(133, 126, 126);
-                        @media screen and (max-width:540px){
-                            font-size: .9rem;
-                         }
-                    }
-                }
-            }
-
-          
-        }
-    }
+  }
 }
